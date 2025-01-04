@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
 
-function PrimaryButton({ children }) {
+function PrimaryButton({ children, onPress }) {
   return (
     // To fix issue of anroid_ripple applying ripple outside the button, simply move <Pressable> to be inside <View>
     <View style={styles.buttonOuterContainer}>
@@ -12,6 +12,7 @@ function PrimaryButton({ children }) {
             : styles.buttonInnerContainer
         }
         android_ripple={{ color: "#640233" }}
+        onPress={onPress}
       >
         <Text style={styles.buttonText}>{children}</Text>
       </Pressable>
