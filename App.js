@@ -2,6 +2,7 @@ import { useState } from "react";
 import { StyleSheet, View, ImageBackground, SafeAreaView } from "react-native";
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
+import Colours from "./constants/Colours";
 // import { LinearGradient } from "expo-linear-gradient";
 
 export default function App() {
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   rootScreen: {
     // flex 1 because views only ever take minimal space needed to display content. Flex 1 forces it to take MAXIMUM space.
     flex: 1,
-    backgroundColor: "#ddb52f",
+    backgroundColor: Colours.accent500,
   },
   backgroundImage: {
     opacity: 0.35,
